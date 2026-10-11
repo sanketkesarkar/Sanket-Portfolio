@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Sanket Kesarkar, AI Software Engineer</title>
+  <meta name="description" content="Sanket Kesarkar, AI Software Engineer. Production LLM applications, LangGraph and MCP agents, RAG systems, and distributed backend systems on AWS, GCP, and Azure." />
+  <meta name="author" content="Sanket Kesarkar" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230D1230'/><rect x='7' y='9' width='18' height='4' rx='2' fill='%235EEAD4'/><rect x='7' y='16' width='12' height='3' rx='1.5' fill='%238B89FF'/><rect x='7' y='22' width='8' height='3' rx='1.5' fill='%238B89FF' opacity='.6'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#070A18" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <canvas id="net" class="net" aria-hidden="true"></canvas>
+  <div class="glow" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a href="#top" class="brand" aria-label="Sanket Kesarkar, back to top">
+        <span class="brand-mark" aria-hidden="true">sk</span>
+        <span>Sanket Kesarkar</span>
+      </a>
+      <nav aria-label="Sections">
+        <a href="#impact">Impact</a>
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#stack">Stack</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#certs">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero wrap" id="top">
+      <div class="hero-text">
+        <p class="status"><span class="pulse" aria-hidden="true"></span>Open to full-time software engineering roles</p>
+        <h1 class="name">Sanket Kesarkar</h1>
+        <p class="lede">
+          AI software engineer. I build production LLM systems and the backend that keeps them
+          honest: LangGraph agents that process documents end to end, retrieval that cites
+          its sources, and queues that don't lose payments.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="mailto:sanketkusa@gmail.com">Email me</a>
+          <a class="btn" href="https://github.com/sanketkesarkar" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/sanketk07/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+
+      <!-- ASK (signature element) -->
+      <div class="ask" id="ask" role="search" aria-labelledby="ask-h">
+        <h2 id="ask-h" class="ask-title">Ask this portfolio</h2>
+        <p class="ask-sub">Search my work the way DocMind searches PDFs: ranked passages with links to the source, or no answer when the evidence is thin.</p>
+        <form class="ask-bar" id="askForm">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 4a6.5 6.5 0 1 0 4.03 11.6l4.43 4.43 1.41-1.41-4.43-4.43A6.5 6.5 0 0 0 10.5 4zm0 2a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9z"/></svg>
+          <label for="q" class="sr">Question</label>
+          <input id="q" type="search" placeholder="Has he built LLM agents?" autocomplete="off" spellcheck="false" />
+          <kbd title="Press / to focus">/</kbd>
+          <button class="btn primary" type="submit">Search</button>
+        </form>
+        <div class="chips" aria-label="Example questions">
+          <button type="button" class="chip" data-q="agents with LangGraph">LLM agents</button>
+          <button type="button" class="chip" data-q="cutting costs">Cutting costs</button>
+          <button type="button" class="chip" data-q="RAG and retrieval">RAG and retrieval</button>
+          <button type="button" class="chip" data-q="queues and messaging">Queues and messaging</button>
+          <button type="button" class="chip" data-q="latency and performance">Performance</button>
+          <button type="button" class="chip" data-q="mentoring and leadership">Leadership</button>
+        </div>
+        <div class="ask-out" id="askOut" aria-live="polite"></div>
+        <p class="ask-note">Runs in your browser: BM25 keyword ranking over <span id="nChunks">all</span> passages on this page. No model calls, nothing leaves your device.</p>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section class="wrap section" id="impact" aria-labelledby="impact-h">
+      <h2 class="h2" id="impact-h">Before and after</h2>
+      <p class="muted section-sub">What changed in production after I shipped. Bars show the "after" relative to the "before".</p>
+      <ul class="deltas">
+        <li style="--after:.10">
+          <div class="d-label">Fraud investigation time</div>
+          <div class="d-vals"><s>100%</s><b>−90%</b></div>
+          <div class="d-bar"><span></span></div>
+          <div class="d-how">Text, audio, and image pipelines on SageMaker and EKS; $50K saved per year</div>
+        </li>
+        <li style="--after:.20">
+          <div class="d-label">Risk profiling done by hand</div>
+          <div class="d-vals"><s>100%</s><b>−80%</b></div>
+          <div class="d-bar"><span></span></div>
+          <div class="d-how">50K+ queries routed across classification and vision models at 95% accuracy</div>
+        </li>
+        <li style="--after:.05">
+          <div class="d-label">Manual contract processing</div>
+          <div class="d-vals"><s>100%</s><b>−95%</b></div>
+          <div class="d-bar"><span></span></div>
+          <div class="d-how">LangGraph + MCP agents, 99% accuracy across 100+ fields</div>
+        </li>
+        <li style="--after:.25">
+          <div class="d-label">API response time</div>
+          <div class="d-vals"><s>~800ms</s><b>~200ms</b></div>
+          <div class="d-bar"><span></span></div>
+          <div class="d-how">Redis caching and RabbitMQ async processing; DB load down 40%</div>
+        </li>
+        <li style="--after:.125">
+          <div class="d-label">Time to detect incidents</div>
+          <div class="d-vals"><s>~2h</s><b>&lt;15m</b></div>
+          <div class="d-bar"><span></span></div>
+          <div class="d-how">CloudWatch, X-Ray tracing, alerts, and runbooks</div>
+        </li>
+        <li style="--after:.5">
+          <div class="d-label">Days between releases</div>
+          <div class="d-vals"><s>14</s><b>7</b></div>
+          <div class="d-bar"><span></span></div>
+          <div class="d-how">Docker on ECS/Fargate via GitHub Actions, with automated rollback</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- WORK -->
+    <section class="wrap section" id="work" aria-labelledby="work-h">
+      <h2 class="h2" id="work-h">Work</h2>
+
+      <div class="timeline">
+        <article class="role current" id="modelearth" data-src="Model Earth">
+          <div class="role-when">
+            <p class="when-date">Mar 2026 – present</p>
+            <p class="muted">Remote, US</p>
+          </div>
+          <div class="role-body">
+            <h3>AI Software Engineer, Model Earth</h3>
+
+
+            <div class="client" id="feedzai" data-src="Model Earth / Feedzai">
+              <h4>Feedzai <span class="muted">client</span></h4>
+              <ul>
+                <li>Cut investigation time <strong>90%</strong> and saved <strong>$50K a year</strong> by deploying text, transcribed-audio, and image processing pipelines on AWS SageMaker, Lambda, S3, and EKS.</li>
+                <li>Automated <strong>80% of risk profiling at 95% accuracy</strong> by routing 50K+ queries across classification and vision models, with AWS Glue/Lambda retraining that reduced false positives by 15%.</li>
+                <li>Reduced manual contract processing <strong>95%</strong> across 10+ contract types by building extraction, retrieval, and validation agents with LangGraph and MCP tools, reaching 99% accuracy across 100+ financial fields.</li>
+                <li>Removed client-side API keys by engineering an OAuth credential proxy that kept vendor credentials server-side, managed token expiry and refresh, and enforced shared-quota rate limits.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="role" id="aeroshield" data-src="AeroShield Materials">
+          <div class="role-when">
+            <p class="when-date">May – Dec 2024</p>
+            <p class="muted">Boston, MA</p>
+          </div>
+          <div class="role-body">
+            <h3>Software Engineering Co-op, AeroShield Materials</h3>
+            <ul>
+              <li>Took production report generation from <strong>hours to minutes</strong> with FastAPI REST APIs and SQL Server workflows for an internal platform used by 100+ employees, wired to a React/Redux frontend.</li>
+              <li>Digitized quality-control inspections with server-side validation and SQL-backed data models, replacing paper forms and reducing manual data-entry errors across ~50 daily inspections.</li>
+              <li>Enforced least-privilege access across <strong>3 user tiers</strong> with application-level RBAC on Azure Active Directory, validating JWT access tokens issued through OAuth 2.0 to restrict API access by role.</li>
+              <li>Automated containerized deployments to Azure App Service with Docker and GitHub Actions, using Azure Key Vault for secrets and HTTPS termination to eliminate manual release steps.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role" id="accenture" data-src="Accenture">
+          <div class="role-when">
+            <p class="when-date">Feb 2021 – Aug 2023</p>
+            <p class="muted">Mumbai, India</p>
+          </div>
+          <div class="role-body">
+            <h3>Software Developer, Accenture</h3>
+            <ul>
+              <li>Brought API response times from <strong>~800ms to ~200ms</strong> and cut database load 40% with Redis caching and RabbitMQ async processing across Node.js/Express microservices.</li>
+              <li>Recovered <strong>$2K+ in monthly revenue</strong> by hardening payment processing with idempotent webhook handlers, Redis-backed transaction state, and RabbitMQ dead-letter queues.</li>
+              <li>Moved releases from biweekly to weekly by containerizing services and deploying to AWS ECS/Fargate through GitHub Actions, with automated rollback on failure.</li>
+              <li>Shortened mean time to detection from <strong>~2 hours to under 15 minutes</strong> with CloudWatch, X-Ray tracing, PostgreSQL Performance Insights, alerts, and runbooks.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="wrap section" id="projects" aria-labelledby="proj-h">
+      <h2 class="h2" id="proj-h">Projects</h2>
+      <p class="muted section-sub">Each one drawn as the path a request actually takes. Send one through to watch it move.</p>
+
+      <article class="project" id="docmind">
+        <div class="p-text">
+          <h3>DocMind</h3>
+          <p class="p-kind">RAG document intelligence platform</p>
+          <p class="p-desc">Ask questions of your PDFs and get streamed answers with page-level citations. Hybrid retrieval fuses vector and keyword search, and the system declines to answer when the evidence is too weak.</p>
+          <dl class="p-stats">
+            <div><dt>search p50</dt><dd>10ms</dd></div>
+            <div><dt>search p95</dt><dd>18ms</dd></div>
+            <div><dt>load test</dt><dd>k6, 5 users</dd></div>
+            <div><dt>end-to-end p50</dt><dd>205ms</dd></div>
+          </dl>
+          <p class="stack-line">Python, FastAPI, PostgreSQL, pgvector, Redis, LangChain, Docker</p>
+          <a class="p-link" href="https://github.com/sanketkesarkar/docmind" target="_blank" rel="noopener">View the code on GitHub</a>
+        </div>
+        <div class="flow-wrap">
+          <ol class="flow" aria-label="DocMind request path">
+            <li>PDF upload</li>
+            <li>Redis + RQ workers<small>idempotent chunk dedup</small></li>
+            <li>3,072-d embeddings<small>500-word chunks</small></li>
+            <li class="fork"><span>pgvector cosine</span><span>BM25 keyword</span></li>
+            <li>Reciprocal Rank Fusion</li>
+            <li>SSE answer<small>citations or abstain</small></li>
+          </ol>
+          <div class="trace-controls">
+            <button type="button" class="btn trace-btn" data-again="Send another">Send a request</button>
+            <span class="trace-status" aria-live="polite"></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project" id="copilot">
+        <div class="p-text">
+          <h3>Therapist Copilot</h3>
+          <p class="p-kind">Real-time AI session service</p>
+          <p class="p-desc">Streams a live session's audio, transcribes it as it happens, and scores crisis risk on the fly so a therapist gets an alert when it crosses a threshold they set. Session-level locking prevents concurrent writes.</p>
+          <dl class="p-stats">
+            <div><dt>transport</dt><dd>bidirectional WS</dd></div>
+            <div><dt>output</dt><dd>JSON risk scores</dd></div>
+            <div><dt>fallback</dt><dd>auto provider</dd></div>
+          </dl>
+          <p class="stack-line">Python, FastAPI, Deepgram, Gemini, LangChain, Docker Compose</p>
+          <a class="p-link" href="https://github.com/sanketkesarkar/therapist-copilot" target="_blank" rel="noopener">View the code on GitHub</a>
+        </div>
+        <div class="flow-wrap">
+          <ol class="flow" aria-label="Therapist Copilot request path">
+            <li>Live audio</li>
+            <li>FastAPI WebSocket<small>buffered, lifecycle-managed</small></li>
+            <li>Deepgram transcription<small>with provider fallback</small></li>
+            <li>Gemini via LangChain<small>async, session-locked</small></li>
+            <li>Risk score JSON</li>
+            <li>Crisis alert<small>configurable threshold</small></li>
+          </ol>
+          <div class="trace-controls">
+            <button type="button" class="btn trace-btn" data-again="Stream again">Stream a session</button>
+            <span class="trace-status" aria-live="polite"></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project" id="terrascale">
+        <div class="p-text">
+          <h3>TerraScale</h3>
+          <p class="p-kind">Cloud infrastructure automation on GCP</p>
+          <p class="p-desc">A highly available Node.js app on GCP, defined in Terraform, that scales horizontally across instances on its own. Releases roll out with zero downtime and roll back automatically if something breaks.</p>
+          <dl class="p-stats">
+            <div><dt>deploys</dt><dd>zero downtime</dd></div>
+            <div><dt>scaling</dt><dd>auto horizontal</dd></div>
+            <div><dt>rollback</dt><dd>automated</dd></div>
+          </dl>
+          <p class="stack-line">Node.js, MySQL, GCP, Terraform, Packer, GitHub CI/CD</p>
+          <a class="p-link" href="https://github.com/orgs/csye6225-sanket/repositories" target="_blank" rel="noopener">View the code on GitHub</a>
+        </div>
+        <div class="flow-wrap">
+          <ol class="flow" aria-label="TerraScale deployment path">
+            <li>git push</li>
+            <li>GitHub Actions</li>
+            <li>Packer machine image</li>
+            <li>Rolling update<small>auto rollback</small></li>
+            <li>Regional MIG + HTTPS LB</li>
+            <li>Cloud SQL<small>Node.js REST APIs</small></li>
+          </ol>
+          <div class="trace-controls">
+            <button type="button" class="btn trace-btn" data-again="Deploy again">Run a deploy</button>
+            <span class="trace-status" aria-live="polite"></span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- STACK -->
+    <section class="wrap section" id="stack" aria-labelledby="stack-h">
+      <h2 class="h2" id="stack-h">Stack</h2>
+      <p class="muted section-sub">Select any tool to see where I've used it.</p>
+      <dl class="stack-list">
+        <div><dt>AI &amp; LLM</dt><dd>LangChain, LangGraph, RAG, Model Context Protocol (MCP), Fine-tuning, GPT-4/Vision, Google Gemini</dd></div>
+        <div><dt>Languages</dt><dd>Python, Java, Go, TypeScript, JavaScript, C, C++, SQL, Shell/Bash</dd></div>
+        <div><dt>Backend</dt><dd>Express.js, Node.js, WebSockets, Microservices, FastAPI, REST API, RBAC</dd></div>
+        <div><dt>Distributed &amp; data</dt><dd>PostgreSQL, MySQL, MongoDB, pgvector, Convex, Idempotency, Redis, RabbitMQ, Dead-letter queues</dd></div>
+        <div><dt>Cloud &amp; DevOps</dt><dd>AWS, GCP, Azure, Terraform, Packer, Jenkins, EKS, GitHub Actions, Docker, Kubernetes</dd></div>
+        <div><dt>Frontend</dt><dd>React, Material UI, Redux, Angular, Bootstrap, Tailwind CSS, React Hook Form</dd></div>
+      </dl>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="wrap section" id="education" aria-labelledby="edu-h">
+      <h2 class="h2" id="edu-h">Education</h2>
+      <div class="edu-grid">
+        <div class="edu">
+          <p class="when">Dec 2025</p>
+          <h3>MS, Computer Software Engineering</h3>
+          <p>Northeastern University, Boston</p>
+          <p class="muted">Network Structures and Cloud Computing, Web Design and User Experience, Agile Software Development</p>
+        </div>
+        <div class="edu">
+          <p class="when">Jun 2020</p>
+          <h3>BE, Computer and Telecommunication</h3>
+          <p>University of Mumbai</p>
+          <p class="muted">Object-Oriented Programming, Operating Systems, DBMS, Data Structures and Algorithms</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="wrap section" id="achievements" aria-labelledby="ach-h">
+      <h2 class="h2" id="ach-h">Achievements</h2>
+      <p class="muted section-sub">Teaching, mentoring, and leading teams at Northeastern University.</p>
+      <ul class="achvs">
+        <li class="achv" id="ach-ta">
+          <span class="achv-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zm-6.8 9.2v3.6L12 19.5l6.8-3.7v-3.6L12 15.9l-6.8-3.7z"/></svg></span>
+          <p class="achv-when">Summer and Fall 2025</p>
+          <h3>Teaching Assistant, Agile Software Development</h3>
+          <p class="achv-text">Supported INFO 7245 for two consecutive semesters under Professor Jacob Housman, from May to December 2025.</p>
+        </li>
+        <li class="achv" id="ach-mentor">
+          <span class="achv-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-3.3 0-7 1.7-7 4v3h14v-3c0-2.3-3.7-4-7-4zm7.5-2.2a3.3 3.3 0 1 0 0-6.6 3.3 3.3 0 0 0 0 6.6zM18 13c-.6 0-1.2.1-1.8.2 1.1.9 1.8 2.1 1.8 3.8v3h4v-3c0-2.2-2.2-4-4-4z"/></svg></span>
+          <p class="achv-when">Fall 2025</p>
+          <h3>Teaching Assistant Peer Mentor</h3>
+          <p class="achv-text">Recognized by Northeastern's College of Engineering for mentoring new Teaching Assistants in the Multidisciplinary Graduate Engineering unit and for excellence in mentorship and leadership.</p>
+        </li>
+        <li class="achv" id="ach-events">
+          <span class="achv-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4 5 11l1.4 1.4L11 7.8V20h2V7.8l4.6 4.6L19 11l-7-7z"/></svg></span>
+          <p class="achv-when">Northeastern Event Management Team</p>
+          <h3>Promoted to House Manager</h3>
+          <ol class="achv-path" aria-label="Role progression">
+            <li><b>Event Assistant</b><span>Joined the team</span></li>
+            <li><b>House Manager</b><span>Promoted</span></li>
+          </ol>
+        </li>
+      </ul>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="wrap section" id="certs" aria-labelledby="certs-h">
+      <h2 class="h2" id="certs-h">Certifications</h2>
+      <p class="muted section-sub">Nine active credentials across AWS, Microsoft Azure, and Scrum Alliance.</p>
+      <ul class="certs">
+        <li class="cert">
+          <p class="cert-issuer">Amazon Web Services</p>
+          <h3>AWS Certified Solutions Architect – Associate</h3>
+          <p class="cert-date">Issued Mar 2026, valid through Mar 2029</p>
+          <a class="cert-link" href="https://aws.amazon.com/verification" target="_blank" rel="noopener">Verify on AWS</a>
+          <p class="cert-id">Validation 076923ac0f7e40f3b50d0f0f1d8558cd</p>
+        </li>
+        <li class="cert">
+          <p class="cert-issuer">Amazon Web Services</p>
+          <h3>AWS Certified Cloud Practitioner</h3>
+          <p class="cert-date">Issued Oct 2025, valid through Mar 2029</p>
+          <a class="cert-link" href="https://aws.amazon.com/verification" target="_blank" rel="noopener">Verify on AWS</a>
+          <p class="cert-id">Validation 488ddafd2aef4894ba273b2a087f8ef9</p>
+        </li>
+        <li class="cert">
+          <p class="cert-issuer">Scrum Alliance</p>
+          <h3>Certified ScrumMaster (CSM)</h3>
+          <p class="cert-date">Issued Aug 2025, active through Aug 2027</p>
+          <p class="cert-id">Certificant ID 001779055</p>
+        </li>
+        <li class="cert cert-wide">
+          <p class="cert-issuer">Microsoft</p>
+          <h3>Six Microsoft Certified Fundamentals</h3>
+          <ul class="cert-list">
+            <li><b>AI-900</b> Azure AI Fundamentals<span>Jun 2021</span></li>
+            <li><b>AZ-900</b> Azure Fundamentals<span>Apr 2021</span></li>
+            <li><b>DP-900</b> Azure Data Fundamentals<span>Jun 2021</span></li>
+            <li><b>SC-900</b> Security, Compliance, and Identity Fundamentals<span>Jan 2022</span></li>
+            <li><b>PL-900</b> Power Platform Fundamentals<span>Jun 2021</span></li>
+            <li><b>MS-900</b> Microsoft 365 Fundamentals<span>Apr 2021</span></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="wrap section contact" id="contact" aria-labelledby="contact-h">
+      <h2 class="h2" id="contact-h">Let's build something that holds up in production.</h2>
+      <div class="contact-row">
+        <a class="big-mail" href="mailto:sanketkusa@gmail.com">sanketkusa@gmail.com</a>
+        <button class="btn" id="copyBtn" data-email="sanketkusa@gmail.com">Copy email</button>
+      </div>
+      <p class="muted contact-meta">
+        <a href="tel:+18576930365">+1 (857) 693-0365</a>
+        <a href="https://github.com/sanketkesarkar" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/sanketk07/" target="_blank" rel="noopener">LinkedIn</a>
+        <span>Los Angeles, CA, open to relocating</span>
+      </p>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <span>© 2026 Sanket Kesarkar</span>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
